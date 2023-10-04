@@ -26,7 +26,6 @@ const useGames = () => {
     apiClient
       .get<FetchGamesResponse>("/games")
       .then((res) => {
-        console.log(res.data.results);
         setGame(res.data.results);
       })
       .catch((err) => {
