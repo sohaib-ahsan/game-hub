@@ -19,7 +19,7 @@ const PlatformSelector = ({ onSelectedPlatform, SelectedPlatform }: Props) => {
   const { data, error } = usePlatforms();
   if (error) return null;
   return (
-    <Box paddingX={6}>
+    <Box paddingLeft={6} paddingRight={3}>
       <Menu>
         <MenuButton as={Button} rightIcon={<BsChevronDown />}>
           {SelectedPlatform?.name ? SelectedPlatform.name : "Platform"}
