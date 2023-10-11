@@ -1,6 +1,7 @@
 import {
   Button,
   HStack,
+  Heading,
   Image,
   List,
   ListItem,
@@ -22,6 +23,9 @@ const GenreList = ({ onSelectedGenre, selectedGenre }: Props) => {
   // if (isLoading) return <Spinner />;
   return (
     <>
+      <Heading fontSize="3xl" marginBottom={2}>
+        Genres
+      </Heading>
       {isLoading && (
         <List>
           {skeleton.map((el) => (
@@ -42,6 +46,7 @@ const GenreList = ({ onSelectedGenre, selectedGenre }: Props) => {
                 boxSize="32px"
                 src={getCroppedImageUrl(el.image_background)}
                 borderRadius={8}
+                objectFit="cover"
               />
               <Button
                 fontSize="lg"
